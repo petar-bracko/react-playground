@@ -1,13 +1,15 @@
-import { createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Homepage, UseStateHell } from "pages";
+import { NavBar } from "components";
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Homepage />,
-  },
-  {
-    path: "/useStateHell",
-    element: <UseStateHell />,
-  },
-]);
+export const Router = () => {
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/useStateHell" element={<UseStateHell />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};

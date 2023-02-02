@@ -22,3 +22,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

@@ -1,12 +1,10 @@
 import { NavLink } from "react-router-dom";
 
-let activeStyle: React.CSSProperties = {
-  textDecoration: "underline",
-};
+let activeStyle: React.CSSProperties = { color: "lime" };
 
 export const NavBar = () => (
   <nav>
-    <ul>
+    <ul style={{ display: "flex", columnGap: "1rem" }}>
       <li>
         <NavLink
           to="/"

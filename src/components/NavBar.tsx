@@ -1,24 +1,31 @@
 import { NavLink } from "react-router-dom";
 
-let activeStyle: React.CSSProperties = { color: "lime" };
+const activeStyle: React.CSSProperties = { color: "lime" };
+
+const setActiveNavLink = ({ isActive }: { isActive: boolean }) =>
+  isActive ? activeStyle : undefined;
 
 export const NavBar = () => (
   <nav style={{ padding: "1rem" }}>
     <ul style={{ display: "flex", columnGap: "1rem" }}>
       <li>
-        <NavLink
-          to="/"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
+        <NavLink to="/" style={setActiveNavLink}>
           Homepage
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to="/useStateHell"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
-        >
+        <NavLink to="/useStateHell" style={setActiveNavLink}>
           useState Hell
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contextConsumer" style={setActiveNavLink}>
+          Context consumer
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contextMutator" style={setActiveNavLink}>
+          Context mutator
         </NavLink>
       </li>
     </ul>

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 let activeStyle: React.CSSProperties = { color: "lime" };
 
 export const NavBar = () => (
-  <nav>
+  <nav style={{ padding: "1rem" }}>
     <ul style={{ display: "flex", columnGap: "1rem" }}>
       <li>
         <NavLink

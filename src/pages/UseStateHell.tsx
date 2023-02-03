@@ -25,6 +25,17 @@ export const UseStateHell = () => {
     <>
       <h2>UseStateHell</h2>
       <div>
+        A{" "}
+        <a
+          href="https://www.builder.io/blog/use-reducer"
+          target="_blank"
+          style={{ color: "cyan" }}
+        >
+          Cure
+        </a>{" "}
+        for React useState Hell
+      </div>
+      <div>
         <pre>{JSON.stringify(info, null, 2)}</pre>
       </div>
       <input

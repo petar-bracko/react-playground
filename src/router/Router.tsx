@@ -6,10 +6,12 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/useStateHell" element={<UseStateHell />} />
-      </Routes>
+      <div id="page">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/useStateHell" element={<UseStateHell />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 };

@@ -28,6 +28,11 @@ export const NavBar = () => (
           Context mutator
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/reducer" style={setActiveNavLink}>
+          Using reducer
+        </NavLink>
+      </li>
     </ul>
   </nav>
 );

@@ -1,5 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ContextConsumer, ContextMutator, Homepage, UseStateHell } from "pages";
+import {
+  ContextConsumer,
+  ContextMutator,
+  Homepage,
+  UnknownRoute,
+  UseStateHell,
+} from "pages";
 import { NavBar } from "components";
 
 export const Router = () => {
@@ -12,7 +18,7 @@ export const Router = () => {
           <Route path="/useStateHell" element={<UseStateHell />} />
           <Route path="/contextConsumer" element={<ContextConsumer />} />
           <Route path="/contextMutator" element={<ContextMutator />} />
-          <Route path="*" element={<div>Unknown route &#x1F6A9;</div>} />
+          <Route path="*" element={<UnknownRoute />} />
         </Routes>
       </div>
     </BrowserRouter>
